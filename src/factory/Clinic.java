@@ -19,15 +19,15 @@ public class Clinic {
         switch (choice) {
             case 1:
                 pet = new Dog();
-                petRecord.setPetName("Bantay");
+                petRecord.setPetName("Douglas");
                 petRecord.setPetId("P001");
                 petRecord.setPet(pet);
-                ((Dog) pet).setBreed("German shepherd");
+                ((Dog) pet).setBreed("Siberian Husky");
                 break;
 
             case 2:
                 pet = new Cat();
-                petRecord.setPetName("Muning");
+                petRecord.setPetName("Furball");
                 petRecord.setPetId("P002");
                 petRecord.setPet(pet);
                 ((Cat) pet).setNoOfLives(9);
@@ -43,6 +43,14 @@ public class Clinic {
         System.out.println("Communication sound: " + petRecord.getPet().makeSound());
         System.out.println("Play mode: " + petRecord.getPet().play());
 
+        // Addition
+        System.out.println("\n=== Pet Clinic Record ===");
+        PetClinicRecord clinicRecord = new PetClinicRecord();
+        clinicRecord.setPetId(petRecord.getPetId());
+        clinicRecord.setVisitDate("2023-01-01");
+        clinicRecord.setVetName("Mr. Swan");
+        System.out.println("Visit Date: " + clinicRecord.getVisitDate());
+        System.out.println("Vet Name: " + clinicRecord.getVetName());
 
     }
 
